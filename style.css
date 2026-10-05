@@ -1,0 +1,233 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --green-dark: #0b3d2e;
+    --green: #19a974;
+    --green-light: #dff7ec;
+    --background: #071c17;
+    --card: #102b24;
+    --text: #f2fff9;
+    --muted: #a8c8bc;
+    --red: #ff6b6b;
+    --yellow: #ffd166;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(circle at top right, #174d3b 0, transparent 35%),
+        radial-gradient(circle at bottom left, #0e3b2d 0, transparent 30%),
+        var(--background);
+}
+
+.container {
+    width: min(1050px, 92%);
+    margin: 0 auto;
+    padding: 45px 0 30px;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid var(--green);
+    border-radius: 999px;
+    color: #8ff0c7;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin: 18px 0 8px;
+    font-size: clamp(2.4rem, 7vw, 5rem);
+    line-height: 0.95;
+    letter-spacing: 2px;
+}
+
+h1 span {
+    color: #54e39d;
+}
+
+.subtitle {
+    margin: 15px 0 8px;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.intro {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.challenges {
+    display: grid;
+    gap: 14px;
+}
+
+.challenge {
+    display: grid;
+    grid-template-columns: 75px 1fr 45px;
+    align-items: center;
+    gap: 18px;
+    background: rgba(16, 43, 36, 0.94);
+    border: 1px solid #245a48;
+    border-radius: 15px;
+    padding: 18px 20px;
+    transition: 0.25s ease;
+}
+
+.challenge.correct {
+    border-color: var(--green);
+    box-shadow: 0 0 20px rgba(25, 169, 116, 0.18);
+}
+
+.challenge.incorrect {
+    border-color: var(--red);
+}
+
+.number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #4ddc99;
+}
+
+.challenge h2 {
+    margin: 0 0 6px;
+    font-size: 1.15rem;
+}
+
+.challenge p {
+    margin: 0 0 10px;
+    color: var(--muted);
+}
+
+.challenge small {
+    display: block;
+    margin-top: 7px;
+    color: #789b8e;
+}
+
+input {
+    width: min(100%, 320px);
+    padding: 12px 14px;
+    border: 1px solid #39735f;
+    border-radius: 8px;
+    background: #071c17;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+}
+
+input:focus {
+    border-color: #54e39d;
+    box-shadow: 0 0 0 3px rgba(84, 227, 157, 0.12);
+}
+
+.status {
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+#checkButton {
+    display: block;
+    width: min(100%, 400px);
+    margin: 30px auto;
+    padding: 16px 25px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #19a974, #43d68f);
+    color: #062018;
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(25, 169, 116, 0.25);
+}
+
+#checkButton:hover {
+    transform: translateY(-2px);
+}
+
+.result {
+    text-align: center;
+    padding: 35px 20px;
+    margin-top: 20px;
+    border-radius: 18px;
+    background: rgba(16, 43, 36, 0.98);
+    border: 1px solid #39735f;
+}
+
+.result-icon {
+    font-size: 4rem;
+}
+
+.result h2 {
+    margin: 10px 0;
+    font-size: 2rem;
+}
+
+.result p {
+    max-width: 650px;
+    margin: 0 auto 15px;
+    color: var(--muted);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+#score {
+    font-weight: bold;
+    color: #8ff0c7;
+    margin-bottom: 20px;
+}
+
+.secondary-button {
+    padding: 10px 20px;
+    border: 1px solid #39735f;
+    border-radius: 8px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    margin-top: 45px;
+    color: #6f9789;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 650px) {
+    .challenge {
+        grid-template-columns: 55px 1fr 35px;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .number {
+        font-size: 1.5rem;
+    }
+
+    .challenge h2 {
+        font-size: 1rem;
+    }
+
+    input {
+        width: 100%;
+    }
+}

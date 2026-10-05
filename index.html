@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green IT: Mission Unlocked</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <section class="hero">
+            <div class="badge">🌱 DIGITAL BREAKOUT</div>
+            <h1>GREEN IT:<br><span>MISSION UNLOCKED</span></h1>
+            <p class="subtitle">Can your team solve all five Green IT challenges?</p>
+            <p class="intro">
+                Enter the solution for each challenge. When you have answered all five,
+                the system will evaluate your Green Team performance.
+            </p>
+        </section>
+
+        <section class="challenges">
+            <div class="challenge">
+                <div class="number">01</div>
+                <div class="challenge-content">
+                    <h2>Hardware Detectives</h2>
+                    <p>What is the correct code for Challenge 1?</p>
+                    <input type="text" id="answer1" autocomplete="off" placeholder="Enter your code">
+                </div>
+                <div class="status" id="status1"></div>
+            </div>
+
+            <div class="challenge">
+                <div class="number">02</div>
+                <div class="challenge-content">
+                    <h2>Energy Detectives</h2>
+                    <p>What is the correct code for Challenge 2?</p>
+                    <input type="text" id="answer2" autocomplete="off" placeholder="Enter your code">
+                </div>
+                <div class="status" id="status2"></div>
+            </div>
+
+            <div class="challenge">
+                <div class="number">03</div>
+                <div class="challenge-content">
+                    <h2>E-Waste Detectives</h2>
+                    <p>What is the correct code for Challenge 3?</p>
+                    <input type="text" id="answer3" autocomplete="off" placeholder="Enter your code">
+                </div>
+                <div class="status" id="status3"></div>
+            </div>
+
+            <div class="challenge">
+                <div class="number">04</div>
+                <div class="challenge-content">
+                    <h2>Digital Footprint</h2>
+                    <p>What is the correct code for Challenge 4?</p>
+                    <input type="text" id="answer4" autocomplete="off" placeholder="Enter your code">
+                </div>
+                <div class="status" id="status4"></div>
+            </div>
+
+            <div class="challenge">
+                <div class="number">05</div>
+                <div class="challenge-content">
+                    <h2>The Green Company</h2>
+                    <p>Which combination of solutions is correct?</p>
+                    <input type="text" id="answer5" autocomplete="off" placeholder="Enter your code">
+                    <small>Enter the letters together, e.g. ABCD</small>
+                </div>
+                <div class="status" id="status5"></div>
+            </div>
+        </section>
+
+        <button id="checkButton">🔓 CHECK ALL CODES</button>
+
+        <section id="result" class="result hidden">
+            <div id="resultIcon" class="result-icon"></div>
+            <h2 id="resultTitle"></h2>
+            <p id="resultMessage"></p>
+            <div id="score"></div>
+            <button id="retryButton" class="secondary-button">TRY AGAIN</button>
+        </section>
+
+        <footer>
+            <p>🌍 Green IT: Mission Unlocked</p>
+            <p>Think green. Use technology wisely. Build a better future.</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
